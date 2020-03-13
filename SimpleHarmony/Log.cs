@@ -1,4 +1,4 @@
-namespace PatchOldHarmony.Utils {
+namespace SimpleHarmony.Utils {
     using System;
     using System.Diagnostics;
     using System.IO;
