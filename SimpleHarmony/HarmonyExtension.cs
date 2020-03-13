@@ -24,7 +24,7 @@ namespace SimpleHarmony2.Patch
                 Log.Info("Patching...");
                 harmony = HarmonyInstance.Create(HARMONY_ID);
                 harmony.PatchAll();
-                Log.Info("Patched.");
+                Log.Info("Patched. Actual harmony version is " + harmony.GetType().Assembly);
             }
         }
 
