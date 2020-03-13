@@ -2,7 +2,7 @@ using ICities;
 using JetBrains.Annotations;
 using System;
 
-namespace SimpleHarmony4
+namespace SimpleHarmony1
 {
     public class SimpleHarmonyMod : IUserMod
     {

@@ -1,8 +1,8 @@
 
-namespace SimpleHarmony4
+namespace SimpleHarmony1
 {
     using Harmony;
-    using SimpleHarmony4.Utils;
+    using SimpleHarmony1.Utils;
     using System.Collections.Generic;
     using System.Reflection;
 
