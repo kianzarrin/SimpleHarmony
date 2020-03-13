@@ -11,8 +11,8 @@
         /// </summary>
         [HarmonyPostfix]
         [UsedImplicitly]
-        public static void Postfix(CitizenManager __instance, uint citizen) {
-            Log.Info("PatchOldHarmony.ReleaseCitizenPatch.Postfix() called ");
+        public static void Postfix(uint citizen) {
+            Log.Info("ReleaseCitizenPatch.Postfix() called for citizen " + citizen);
         }
     }
 }

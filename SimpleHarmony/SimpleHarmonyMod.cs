@@ -10,8 +10,8 @@ namespace SimpleHarmony
     {
         public static Version ModVersion => typeof(SimpleHarmonyMod).Assembly.GetName().Version;
         public static string VersionString => ModVersion.ToString(2);
-        public string Name => "Patch same method" + VersionString;
-        public string Description => "Patches same method as TMPE.";
+        public string Name => "simple Harmony " + VersionString;
+        public string Description => "Simply Patches ReleaseCitizen().";
 
         HarmonyExtension harmonyExt;
         [UsedImplicitly]
