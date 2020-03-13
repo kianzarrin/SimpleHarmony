@@ -11,7 +11,7 @@ namespace SimpleHarmony3
         public static Version ModVersion => typeof(SimpleHarmonyMod).Assembly.GetName().Version;
         public static string VersionString => ModVersion.ToString(2);
         public string Name => "simple Harmony H2" + VersionString;
-        public string Description => "Simply Patches ReleaseCitizen() using harmony 2.0.0.8.";
+        public string Description => "Simply Patches ReleaseCitizen() using HarmonyLib 2.0.0.8.";
 
         HarmonyExtension harmonyExt;
         [UsedImplicitly]
