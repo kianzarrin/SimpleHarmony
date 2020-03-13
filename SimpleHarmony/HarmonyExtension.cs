@@ -9,7 +9,11 @@ namespace SimpleHarmony3.Patch
     public class HarmonyExtension
     {
         Harmony harmony;
-        public const string HARMONY_ID = "CS.Kian.harmony_self_patching";
+        public static string AssemblyName = Assembly.GetExecutingAssembly().GetName().Name;
+        public static Assembly BuildTimeHarmony = typeof(Harmony).Assembly;
+        public Assembly RunTimeHarmony => harmony.GetType().Assembly;
+        public static string HARMONY_ID = "CS.Kian." + AssemblyName;
+       
         struct PatchPair
         {
             public MethodBase Original;
@@ -24,8 +28,10 @@ namespace SimpleHarmony3.Patch
                 Log.Info("Patching...");
                 harmony = new Harmony(HARMONY_ID);
                 harmony.PatchAll();
-                Log.Info("Patched. acutal harmony is: " + harmony.GetType());
-                
+                Log.Info(
+                    "Patched. \n build time harmony = "+ BuildTimeHarmony + "\n"+
+                    "run time harmony is: " + RunTimeHarmony);
+
             }
         }
 
