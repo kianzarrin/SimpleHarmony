@@ -1,5 +1,5 @@
 
-namespace SimpleHarmony2.Patch
+namespace SimpleHarmony2
 {
     using Harmony;
     using SimpleHarmony2.Utils;
@@ -8,8 +8,12 @@ namespace SimpleHarmony2.Patch
 
     public class HarmonyExtension
     {
+        public static string AssemblyName = Assembly.GetExecutingAssembly().GetName().Name;
+        public static Assembly BuildTimeHarmony = typeof(HarmonyInstance).Assembly;
+        public Assembly RunTimeHarmony => harmony.GetType().Assembly;
+        public static string HARMONY_ID = "CS.Kian." + AssemblyName; 
         HarmonyInstance harmony;
-        public const string HARMONY_ID = "CS.Kian.harmony_self_patching";
+
         struct PatchPair
         {
             public MethodBase Original;
@@ -24,7 +28,9 @@ namespace SimpleHarmony2.Patch
                 Log.Info("Patching...");
                 harmony = HarmonyInstance.Create(HARMONY_ID);
                 harmony.PatchAll();
-                Log.Info("Patched. Actual harmony version is " + harmony.GetType().Assembly);
+                Log.Info(
+                    "Patched. \n build time harmony = " + BuildTimeHarmony + "\n" +
+                    "run time harmony is: " + RunTimeHarmony);
             }
         }
 

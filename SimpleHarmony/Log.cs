@@ -42,7 +42,7 @@ namespace SimpleHarmony2.Utils {
 
         // TODO refactor log filename to configuration
         private static readonly string LogFilename
-            = Path.Combine(Application.dataPath, Assembly.GetExecutingAssembly().GetName().Name + ".log");
+            = Path.Combine(Application.dataPath, HarmonyExtension.AssemblyName + ".log");
 
         private enum LogLevel {
             Trace,

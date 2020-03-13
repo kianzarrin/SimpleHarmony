@@ -1,7 +1,5 @@
 using ICities;
 using JetBrains.Annotations;
-using SimpleHarmony2.Utils;
-using SimpleHarmony2.Patch;
 using System;
 
 namespace SimpleHarmony2
@@ -10,8 +8,8 @@ namespace SimpleHarmony2
     {
         public static Version ModVersion => typeof(SimpleHarmonyMod).Assembly.GetName().Version;
         public static string VersionString => ModVersion.ToString(2);
-        public string Name => "simple Harmony " + VersionString;
-        public string Description => "Simply Patches ReleaseCitizen().";
+        public string Name => VersionString + " simple Harmony";
+        public string Description => "Simply Patches ReleaseCitizen() using " + HarmonyExtension.BuildTimeHarmony.GetName().FullName;
 
         HarmonyExtension harmonyExt;
         [UsedImplicitly]
