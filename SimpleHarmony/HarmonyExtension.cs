@@ -1,8 +1,8 @@
 
-namespace SimpleHarmony2
+namespace SimpleHarmony4
 {
     using Harmony;
-    using SimpleHarmony2.Utils;
+    using SimpleHarmony4.Utils;
     using System.Collections.Generic;
     using System.Reflection;
 
@@ -22,7 +22,6 @@ namespace SimpleHarmony2
 
         public void InstallHarmony()
         {
-
             if (harmony == null)
             {
                 Log.Info("Patching...");
