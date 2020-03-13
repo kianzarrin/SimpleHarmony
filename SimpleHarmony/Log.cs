@@ -2,6 +2,7 @@ namespace SimpleHarmony.Utils {
     using System;
     using System.Diagnostics;
     using System.IO;
+    using System.Reflection;
     using System.Threading;
     using UnityEngine;
 
@@ -41,7 +42,7 @@ namespace SimpleHarmony.Utils {
 
         // TODO refactor log filename to configuration
         private static readonly string LogFilename
-            = Path.Combine(Application.dataPath, "harmony_self_patching.debug.log");
+            = Path.Combine(Application.dataPath, Assembly.GetExecutingAssembly().GetName().Name + ".log");
 
         private enum LogLevel {
             Trace,
