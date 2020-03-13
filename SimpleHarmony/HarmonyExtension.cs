@@ -1,8 +1,8 @@
 
-namespace SimpleHarmony3.Patch
+namespace SimpleHarmony5.Patch
 {
     using HarmonyLib;
-    using SimpleHarmony3.Utils;
+    using SimpleHarmony5.Utils;
     using System.Collections.Generic;
     using System.Reflection;
 

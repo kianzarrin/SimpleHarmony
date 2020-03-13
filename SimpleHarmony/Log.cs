@@ -1,4 +1,4 @@
-namespace SimpleHarmony3.Utils {
+namespace SimpleHarmony5.Utils {
     using System;
     using System.Diagnostics;
     using System.IO;
