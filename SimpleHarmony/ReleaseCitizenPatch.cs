@@ -1,4 +1,4 @@
-﻿namespace SimpleHarmony2.Patch{
+﻿namespace SimpleHarmony3.Patch{
     using Harmony;
     using JetBrains.Annotations;
     using Utils;

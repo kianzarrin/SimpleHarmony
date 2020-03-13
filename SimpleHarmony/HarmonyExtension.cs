@@ -1,14 +1,14 @@
 
-namespace SimpleHarmony2.Patch
+namespace SimpleHarmony3.Patch
 {
-    using Harmony;
-    using SimpleHarmony2.Utils;
+    using HarmonyLib;
+    using SimpleHarmony3.Utils;
     using System.Collections.Generic;
     using System.Reflection;
 
     public class HarmonyExtension
     {
-        HarmonyInstance harmony;
+        Harmony harmony;
         public const string HARMONY_ID = "CS.Kian.harmony_self_patching";
         struct PatchPair
         {
@@ -22,9 +22,10 @@ namespace SimpleHarmony2.Patch
             if (harmony == null)
             {
                 Log.Info("Patching...");
-                harmony = HarmonyInstance.Create(HARMONY_ID);
+                harmony = new Harmony(HARMONY_ID);
                 harmony.PatchAll();
-                Log.Info("Patched.");
+                Log.Info("Patched. acutal harmony is: " + harmony.GetType());
+                
             }
         }
 
