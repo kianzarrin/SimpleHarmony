@@ -76,12 +76,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HarmonySelfPatchingMod.cs" />
-    <Compile Include="Patches\HarmonyExtension.cs" />
-    <Compile Include="Patches\ReleaseCitizenPatch.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="SimpleHarmonyMod.cs" />
+    <Compile Include="HarmonyExtension.cs" />
+    <Compile Include="ReleaseCitizenPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\Extensions.cs" />
-    <Compile Include="Utils\Log.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="harmony-self-patching.csproj" />

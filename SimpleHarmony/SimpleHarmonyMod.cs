@@ -1,12 +1,12 @@
 using ICities;
 using JetBrains.Annotations;
-using PatchOldHarmony.Utils;
-using PatchOldHarmony.Patches;
+using SimpleHarmony.Utils;
+using SimpleHarmony.Patch;
 using System;
 
-namespace PatchOldHarmony
+namespace SimpleHarmony
 {
-    public class HarmonySelfPatchingMod : IUserMod
+    public class SimpleHarmonyMod : IUserMod
     {
         public string Name => "Patch same method" + VersionString + " " + BRANCH;
         public string Description => "Patches same method as TMPE.";
@@ -17,7 +17,7 @@ namespace PatchOldHarmony
         public const string BRANCH = "";
 #endif
 
-        public static Version ModVersion => typeof(HarmonySelfPatchingMod).Assembly.GetName().Version;
+        public static Version ModVersion => typeof(SimpleHarmonyMod).Assembly.GetName().Version;
 
         // used for in-game display
         public static string VersionString => ModVersion.ToString(2);

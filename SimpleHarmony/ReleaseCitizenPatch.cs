@@ -1,5 +1,5 @@
-﻿namespace PatchOldHarmony.Patches{
-    using HarmonyLib;
+﻿namespace SimpleHarmony.Patch{
+    using Harmony;
     using JetBrains.Annotations;
     using Utils;
 
