@@ -8,7 +8,7 @@ namespace SimpleHarmony.Patch
 
     public class HarmonyExtension
     {
-        Harmony harmony;
+        HarmonyInstance harmony;
         public const string HARMONY_ID = "CS.Kian.harmony_self_patching";
         struct PatchPair
         {
@@ -21,10 +21,10 @@ namespace SimpleHarmony.Patch
 
             if (harmony == null)
             {
-                Log.Info("harmony_self_patching Patching...");
-
-                harmony = new Harmony(HARMONY_ID);
+                Log.Info("Patching...");
+                harmony = HarmonyInstance.Create(HARMONY_ID);
                 harmony.PatchAll();
+                Log.Info("Patched.");
             }
         }
 
@@ -32,9 +32,10 @@ namespace SimpleHarmony.Patch
         {
             if (harmony != null)
             {
+                Log.Info("UnPatching...");
                 harmony.UnpatchAll(HARMONY_ID);
                 harmony = null;
-                Log.Info("harmony_self_patching patches Reverted.");
+                Log.Info("UnPatched.");
             }
         }
     }
