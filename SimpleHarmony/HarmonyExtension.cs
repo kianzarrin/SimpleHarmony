@@ -1,8 +1,8 @@
 
-namespace SimpleHarmony.Patch
+namespace SimpleHarmony2.Patch
 {
     using Harmony;
-    using SimpleHarmony.Utils;
+    using SimpleHarmony2.Utils;
     using System.Collections.Generic;
     using System.Reflection;
 

@@ -1,10 +1,10 @@
 using ICities;
 using JetBrains.Annotations;
-using SimpleHarmony.Utils;
-using SimpleHarmony.Patch;
+using SimpleHarmony2.Utils;
+using SimpleHarmony2.Patch;
 using System;
 
-namespace SimpleHarmony
+namespace SimpleHarmony2
 {
     public class SimpleHarmonyMod : IUserMod
     {
