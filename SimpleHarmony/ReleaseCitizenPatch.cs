@@ -1,10 +1,10 @@
-﻿namespace SimpleHarmony2.Patch{
+﻿namespace TestHarmonyInheritance.Patch{
     using Harmony;
     using JetBrains.Annotations;
     using Utils;
 
-    [HarmonyPatch(typeof(CitizenManager), "ReleaseCitizen")]
-    [UsedImplicitly]
+    //[HarmonyPatch(typeof(CitizenManager), "ReleaseCitizen")]
+    //[UsedImplicitly]
     public static class ReleaseCitizenPatch {
         /// <summary>
         /// Notifies the extended citizen manager about a released citizen.

@@ -1,8 +1,8 @@
 
-namespace SimpleHarmony2
+namespace TestHarmonyInheritance
 {
     using Harmony;
-    using SimpleHarmony2.Utils;
+    using TestHarmonyInheritance.Utils;
     using System.Collections.Generic;
     using System.Reflection;
 
